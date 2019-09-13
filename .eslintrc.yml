@@ -8,3 +8,4 @@ extends:
 
 rules:
   arrow-body-style: 0
+  eslint linebreak-style: ["error", "windows"]

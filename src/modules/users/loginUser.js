@@ -8,14 +8,15 @@ const EXPIRES_IN_MINUTES = '1440m'
 const JWTSecret = 'myathenticationtoken';
 
 module.exports.authenticate=function(req,res){
-  const user = {
-    username : req.body.username,
-    password : req.body.password
-  }
-   
-   
-   
-    connection.query('SELECT * FROM inscription WHERE username = ?',[username], function (error, results, fields) {
+  
+  
+  
+      var username = req.body.username;
+      var password = req.body.password;
+
+  
+     
+connection.query('SELECT * FROM inscription WHERE username = ?',[username], function (error, results, fields) {
       if (error) {
           res.json({
             status:false,
